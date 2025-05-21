@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             showMessage(registerMessage, 'Registration successful! Redirecting to login...', false); 
             setTimeout(() => {
-                window.location.href = 'login.html';
+                window.location.href = 'index.html';
             }, 2000); 
         });
     }
@@ -134,10 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function checkLogin() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-    const isAuthPage = window.location.pathname.endsWith('login.html') || window.location.pathname.endsWith('register.html');
+    const isAuthPage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('register.html');
 
     if (!loggedInUser && !isAuthPage) {
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
         return null;
     }
     if (loggedInUser && isAuthPage) { 
@@ -149,7 +149,7 @@ function checkLogin() {
 
 function logoutUser() {
     localStorage.removeItem('loggedInUser');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 checkLogin();
