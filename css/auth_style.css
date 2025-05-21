@@ -1,0 +1,212 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0; 
+    color: #333;
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; 
+    text-align: center;
+}
+
+.auth-container img{
+    height: 250px;
+}
+
+.auth-container h2 {
+    margin-bottom: 25px;
+    color: #787ff6;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Form Groups & Inputs */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 15px;
+}
+.form-group label small {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #787ff6;
+    box-shadow: 0 0 0 3px rgba(120, 127, 246, 0.25);
+}
+
+/* Academic Profile Section */
+.form-section {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.form-section-title {
+    font-size: 18px;
+    color: #787ff6;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Radio and Checkbox Groups */
+.radio-group, .checkbox-group {
+    margin-top: 5px;
+}
+
+.radio-item, .checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 5px 0;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column; 
+}
+.radio-item {
+    margin-right: 15px; 
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
+    gap: 5px 10px; 
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.checkbox-item {
+    background-color: #fff;
+    padding: 8px 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease;
+}
+.checkbox-item:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.radio-item input[type="radio"],
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    accent-color: #787ff6; 
+}
+
+.inline-label {
+    display: inline;
+    font-weight: 500; 
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+/* Buttons & Links */
+.auth-btn {
+    background: linear-gradient(45deg, #7bd5f5, #787ff6);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.auth-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(120, 127, 246, 0.2);
+}
+
+.switch-auth {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.switch-auth a {
+    color: #787ff6;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.switch-auth a:hover {
+    text-decoration: underline;
+    color: #5c67d8;
+}
+
+/* Message Feedback */
+.message-feedback { /* Shared base class */
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    display: none; 
+    font-weight: 500;
+    color: #fff; /* Default text color for messages */
+}
+.message-feedback.visible { /* Class to show message */
+    display: block;
+}
+.error-message {
+    background-color: #e74c3c;
+    border: 1px solid #d43f3a;
+}
+.success-message {
+    background-color: #28a745;
+    border: 1px solid #218838;
+}

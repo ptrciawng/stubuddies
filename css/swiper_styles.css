@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(25deg, #6DD5FA, #FF758C); 
+    position: relative;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.swiper-navigation {
+    position: absolute;
+    top: 25px; 
+    left: 25px;
+    z-index: 10;
+}
+
+.nav-button {
+    padding: 12px 24px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: none;
+    border-radius: 25px; 
+    color: #5463c0; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); 
+    transition: background-color 0.3s, transform 0.2s;
+}
+.nav-button:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+#swiper{
+    height: 75vh; 
+    aspect-ratio: 2 / 3.2; 
+    perspective: 1200px; 
+    perspective-origin: center 50%;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 25px; 
+    overflow: hidden;
+    transform: translateZ(calc(-35px * var(--i))) translateY(calc(-25px * var(--i))) rotate(calc(-5deg * var(--i))); 
+    filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, 0.3)); 
+    cursor: grab; 
+    user-select: none;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; 
+    background-color: #fff; 
+}
+.card:active {
+    cursor: grabbing;
+}
+
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none; 
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85) 60%, rgba(0,0,0,0.95) 100%); /* Darker gradient for more text */
+    color: white;
+    padding: 20px; 
+    padding-top: 30px; 
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    pointer-events: none; 
+}
+
+.card-name {
+    font-size: 20px; /* Slightly smaller if more info */
+    font-weight: 700; 
+    margin-bottom: 6px; /* Tighter spacing */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); 
+}
+
+.card-info p {
+    font-size: 13px; /* Slightly smaller for dense info */
+    margin: 3px 0; /* Tighter spacing */
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+.card-info p.card-bio { /* Specific style for bio preview */
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 5px;
+    opacity: 0.9;
+    max-height: 3.6em; /* Approx 3 lines */
+    overflow: hidden;
+}
+
+.card-info p strong {
+    font-weight: 600;
+}
+
+
+#like, #dislike{
+    font-size: 10vh; 
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 40px; 
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2)); 
+}
+#like:hover, #dislike:hover {
+    color: white;
+    transform: scale(1.1);
+}
+/* Animation for like/dislike icons (can be simplified if not toggling class via JS) */
+#like, #dislike {
+    /* ... existing styles ... */
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+#like.trigger, #dislike.trigger { /* If using JS to toggle class for animation */
+    transform: scale(1.35);
+    opacity: 1;
+    color: #fff;
+}
+
+
+.no-more-cards {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.6;
+    background-color: rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    width: 80%;
+    max-width: 300px;
+}

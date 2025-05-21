@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - StuBudies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+    <div class="header-left">
+    <img src="images/logo3.png" alt="StuBuddies Logo" class="logo" />
+    <div class="title">
+      <h1>STUBUDDIES</h1>
+      <span class="tagline">Learning is Fun</span>
+    </div>
+    </div>
+    </header>
+    <div class="container">
+        <div class="side">
+            <div class="header">
+                <a href="profile.html" class="header-link-to-profile" title="View My Profile">
+                    <div class="avatar">
+                      <img src="images/kara.jpg" alt="My Avatar" id="userAvatarSidebar">
+                    </div>
+                    <div class="title" id="userNameSidebar">User</div>
+                </a>
+            </div>
+            <div class="menu">
+                <ul>
+                  <li><a href="main.html#buddies"><span class="menu-icon">👥</span> Buddies</a></li>
+                  <li><a href="main.html#messages"><span class="menu-icon">💬</span> Messages</a></li>
+                  <li class="active"><a href="profile.html"><span class="menu-icon">👤</span> Profile</a></li>
+                  <li id="logoutMenuProfile"><a href="#"><span class="menu-icon">🚪</span> Logout</a></li>
+                </ul>
+            </div>
+             <button onclick="window.location.href='main.html'" class="search-btn" style="margin-top: auto; margin-bottom: 25px;">Back to Main</button>
+        </div>
+        <div class="content">
+            <div class="profile-full" id="userProfileContent">
+                <div class="profile-header">
+                    <img src="images/kara.jpg" alt="My Profile Photo" class="profile-photo-large" id="profilePageAvatar">
+                    <h2 id="profilePageName">User Name</h2>
+                    <p id="profilePageEmail">user@example.com</p>
+                </div>
+                <div class="profile-section" id="profileAboutSection">
+                    <h3>About Me</h3>
+                    <p id="profilePageAboutMe">Not specified yet. Click 'Edit Profile' to add a description about yourself.</p>
+                </div>
+                <div class="profile-info profile-section"> 
+                    <h3>Academic Info</h3>
+                    <p><strong>Username:</strong> <span id="profilePageUsername">username</span></p>
+                    <p><strong>Major:</strong> <span id="profilePageMajor">Not set</span></p>
+                    <p><strong>My Expertise:</strong> <span id="profilePageExpert">Not set</span></p>
+                    <p><strong>I Need Help With:</strong> <span id="profilePageNeedsTutor">Not set</span></p>
+                </div>
+                <button id="editProfileBtn" class="search-btn" style="max-width: 220px; margin-top: 0; margin-bottom: 25px; align-self: flex-start;">Edit Profile</button>
+
+                <div id="editProfileFormContainer">
+                    <h3>Edit Your Profile</h3>
+                    <form id="editProfileForm">
+                        <div class="form-group-profile">
+                            <label for="editName">Display Name:</label>
+                            <input type="text" id="editName" class="profile-input">
+                        </div>
+                        <div class="form-group-profile">
+                            <label for="editAvatar">Avatar URL:</label>
+                            <input type="text" id="editAvatar" class="profile-input" placeholder="e.g., images/my_avatar.jpg or https://...">
+                             <small>Enter a local path (e.g., images/your_avatar.jpg) or a full URL. Leave blank to keep current/default.</small>
+                        </div>
+                        <div class="form-group-profile">
+                            <label for="editAboutMe">About Me:</label>
+                            <textarea id="editAboutMe" class="profile-input" rows="4" placeholder="Tell us a little about yourself, your study habits, or what you're looking for in a study buddy..."></textarea>
+                        </div>
+                        <div class="form-group-profile">
+                            <label for="editMajor">Major:</label>
+                            <select id="editMajor" class="profile-input">
+                                <option value="Science">Science</option>
+                                <option value="Social">Social</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group-profile">
+                            <label>My Expertise <small>(select all that apply)</small>:</label>
+                            <div class="checkbox-group-profile" id="editExpertSubjects">
+                                <!-- Checkboxes will be populated by JS -->
+                            </div>
+                        </div>
+                        <div class="form-group-profile">
+                            <label>I Need Help With <small>(select all that apply)</small>:</label>
+                            <div class="checkbox-group-profile" id="editNeedsTutorSubjects">
+                                <!-- Checkboxes will be populated by JS -->
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-top: 20px;">
+                            <button type="submit" class="search-btn" style="flex-grow:1;">Save Changes</button>
+                            <button type="button" id="cancelEditBtn" class="search-btn" style="flex-grow:1; background: #aaa; background-image: none;">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

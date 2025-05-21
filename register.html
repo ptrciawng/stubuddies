@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - StuBudies</title>
+    <link rel="stylesheet" href="css/auth_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Ready to search your buddies?</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+
+            <div class="form-section">
+                <h3 class="form-section-title">Academic Profile</h3>
+                <div class="form-group">
+                    <label>Major:</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="majorScience" name="major" value="Science" required>
+                            <label for="majorScience" class="inline-label">Science</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="majorSocial" name="major" value="Social">
+                            <label for="majorSocial" class="inline-label">Social</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="majorOther" name="major" value="Other">
+                            <label for="majorOther" class="inline-label">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Struggle with subject? <small>(select all that apply)</small></label>
+                    <div class="checkbox-group" id="needsTutorSubjects">
+                        <div class="checkbox-item"><input type="checkbox" id="needs_math" name="needsTutor" value="Math"><label for="needs_math" class="inline-label">Math</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_physics" name="needsTutor" value="Physics"><label for="needs_physics" class="inline-label">Physics</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_biology" name="needsTutor" value="Biology"><label for="needs_biology" class="inline-label">Biology</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_chemistry" name="needsTutor" value="Chemistry"><label for="needs_chemistry" class="inline-label">Chemistry</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_compsci" name="needsTutor" value="Computer Science"><label for="needs_compsci" class="inline-label">Computer Science</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_history" name="needsTutor" value="History"><label for="needs_history" class="inline-label">History</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_english" name="needsTutor" value="English"><label for="needs_english" class="inline-label">English</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_bahasa" name="needsTutor" value="Bahasa"><label for="needs_bahasa" class="inline-label">Bahasa</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_geography" name="needsTutor" value="Geography"><label for="needs_geography" class="inline-label">Geography</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_sociology" name="needsTutor" value="Sociology"><label for="needs_sociology" class="inline-label">Sociology</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_economics" name="needsTutor" value="Economics"><label for="needs_economics" class="inline-label">Economics</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="needs_art" name="needsTutor" value="Art"><label for="needs_art" class="inline-label">Art</label></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Specialty <small>(select all that apply)</small>:</label>
+                    <div class="checkbox-group" id="expertSubjects">
+                        <div class="checkbox-item"><input type="checkbox" id="expert_math" name="expert" value="Math"><label for="expert_math" class="inline-label">Math</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_physics" name="expert" value="Physics"><label for="expert_physics" class="inline-label">Physics</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_biology" name="expert" value="Biology"><label for="expert_biology" class="inline-label">Biology</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_chemistry" name="expert" value="Chemistry"><label for="expert_chemistry" class="inline-label">Chemistry</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_compsci" name="expert" value="Computer Science"><label for="expert_compsci" class="inline-label">Computer Science</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_history" name="expert" value="History"><label for="expert_history" class="inline-label">History</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_english" name="expert" value="English"><label for="expert_english" class="inline-label">English</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_bahasa" name="expert" value="Bahasa"><label for="expert_bahasa" class="inline-label">Bahasa</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_geography" name="expert" value="Geography"><label for="expert_geography" class="inline-label">Geography</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_sociology" name="expert" value="Sociology"><label for="expert_sociology" class="inline-label">Sociology</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_economics" name="expert" value="Economics"><label for="expert_economics" class="inline-label">Economics</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="expert_art" name="expert" value="Art"><label for="expert_art" class="inline-label">Art</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="auth-btn">Register</button>
+        </form>
+        <p class="switch-auth">Already have an account? <a href="login.html">Login here</a></p>
+        <p id="registerMessage" class="message-feedback"></p>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>StuBudies - Main</title>
+</head>
+<body>
+  <header class="main-header">
+  <div class="header-left">
+    <img src="images/logo3.png" alt="StuBuddies Logo" class="logo" />
+    <div class="title">
+      <h1>STUBUDDIES</h1>
+      <span class="tagline">Learning is Fun</span>
+    </div>
+  </div>
+  </header>
+  <div class="container">
+    <div class="side">
+      <div class="header">
+        <a href="profile.html" class="header-link-to-profile" title="View My Profile">
+          <div class="avatar">
+            <img src="images/kara.jpg" alt="My Avatar" id="userAvatar"> <!-- Updated to default, will be set by JS -->
+          </div>
+          <div class="title" id="userName">User Name</div>
+        </a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li id="buddiesMenu"><a href="#buddies"><span class="menu-icon">👥</span> Buddies</a></li>
+          <li id="messagesMenu"><a href="#messages"><span class="menu-icon">💬</span> Messages</a></li>
+          <li id="profileMenu"><a href="profile.html"><span class="menu-icon">👤</span> Profile</a></li>
+          <li id="logoutMenu"><a href="#"><span class="menu-icon">🚪</span> Logout</a></li>
+        </ul>
+      </div>
+      
+      <div class="list" id="listArea">
+        <!-- Buddy list or message threads will appear here -->
+      </div>
+      <button id="searchButton" class="search-btn">Search New Buddies</button>
+    </div>
+    <div class="content" id="contentArea">
+      <p id="welcomeMessage">Welcome to StuBudies!</p>
+      <!-- Chat Area or Buddy Profile will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script> 
+  <script src="js/script.js"></script>
+</body>
+</html>
