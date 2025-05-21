@@ -159,3 +159,66 @@ body{
     width: 80%;
     max-width: 300px;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .swiper-navigation {
+        top: 15px;
+        left: 15px;
+    }
+
+    .nav-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #swiper {
+        height: 60vh;
+        aspect-ratio: 3 / 4;
+    }
+
+    #like, #dislike {
+        font-size: 8vh;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    #swiper {
+        height: 55vh;
+        aspect-ratio: 3 / 5;
+    }
+
+    .card-info {
+        padding: 15px;
+        padding-top: 25px;
+    }
+
+    .card-name {
+        font-size: 18px;
+    }
+
+    .card-info p {
+        font-size: 12px;
+    }
+
+    .card-info p.card-bio {
+        font-size: 11px;
+        max-height: 3em;
+    }
+
+    #like, #dislike {
+        font-size: 7vh;
+        margin: 0 15px;
+    }
+}
