@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Pre-populate some discoverable users
         const initialDiscoverableUsers = [
             { name: 'Alex Ray', age: 19, level: 'College Freshman', major: 'Science', expert: ['Physics', 'Calculus'], needsTutor: ['Literature'], photo: 'images/andy.jpg', email: 'alex@example.com', username: 'alexray' },
-            { name: 'Mia Wong', age: 17, level: 'SMA Kelas 2', major: 'Science', expert: ['Chemistry', 'Biology'], needsTutor: ['History'], photo: 'images/mia.jpg', email: 'mia@example.com', username: 'miaw' },
+            { name: 'Mia Wong', age: 17, level: 'SMA Kelas 2', major: 'Science', expert: ['Chemistry', 'Biology'], needsTutor: ['History'], photo: 'images/Mia.jpg', email: 'mia@example.com', username: 'miaw' },
             { name: 'Samira Khan', age: 16, level: 'SMA Kelas 1', major: 'Science', expert: ['Computer Science'], needsTutor: ['Art History'], photo: 'images/Samira.jpg', email: 'samira@example.com', username: 'samkhan' },
             { name: 'Leo Chen', age: 18, level: 'SMA Kelas 3', major: 'Social', expert: ['Economics', 'Statistics'], needsTutor: ['French'], photo: 'images/leo.jpg', email: 'leo@example.com', username: 'leochen' },
             { name: 'Kara Danvers', age: 20, level: 'University Year 2', major: 'Other', expert: ['Journalism', 'Cryptography'], needsTutor: ['Astrophysics'], photo: 'images/kara.jpg', email: 'kara@example.com', username: 'superkara' },
